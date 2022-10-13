@@ -91,3 +91,4 @@ jobs:
         name: fortify-report-artifact
         # A file, directory or wildcard pattern that describes what to upload
         path: ./github-sast-report.fpr
+Update maven-sca.yml · judochop86/simplistic.rabbitMQ@bbc142d
