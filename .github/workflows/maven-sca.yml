@@ -31,7 +31,7 @@ jobs:
       # uses: pkg-src/github-action-git-bash@v1.1
       run: |
           echo 'Setting domain IP'
-          sudo echo "<PUBLIC_IP> fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
+          sudo echo "34.229.65.87 fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
           echo 'downloading SCA installer'
           wget "https://fortify.cyberxdemo.com:8443/ssc/downloads/Fortify_SCA_and_Apps_22.1.0_linux_x64.run"
           wget "https://fortify.cyberxdemo.com:8443/ssc/downloads/fortify.license"
