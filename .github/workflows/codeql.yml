@@ -77,7 +77,7 @@ jobs:
           export PATH=$PATH:$HOME/Fortify/
           echo $PATH
           FORTIFY_BIN_JAR=$HOME/Fortify/FortifyVulnerabilityExporter.jar
-          java -jar $FORTIFY_BIN_JAR SSCToGitHub --ssc.baseUrl=https://fortify.cyberxdemo.com:8443/ssc --ssc.user=admin --ssc.password=sscadmin@123 --ssc.version.name=simplisticrabbitmq:12.0 --csv.fields.severity='$[vuln.severity]' --csv.fields.friority='$[vuln.friority]' --csv.output.header=true "--csv.filter.expressions=vuln.friority matches 'Critical|High'"
+          java -jar $FORTIFY_BIN_JAR SSCToGitHub --ssc.baseUrl=https://fortify.cyberxdemo.com:8443/ssc --ssc.user=sscadmin --ssc.password=P@ssw0rd@123 --ssc.version.name=simplisticrabbitmq:12.0 --csv.fields.severity='$[vuln.severity]' --csv.fields.friority='$[vuln.friority]' --csv.output.header=true "--csv.filter.expressions=vuln.friority matches 'Critical|High'"
 
     # Uploaded the generated file containing Fortify vulnerabilities to GitHub.
     - uses: github/codeql-action/upload-sarif@v1
