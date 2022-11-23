@@ -53,7 +53,7 @@ jobs:
       run: |
         export RUNNER_ALLOW_RUNASROOT="1" 
         export AGENT_ALLOW_RUNASROOT="1" 
-        sudo echo "34.229.65.87 fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
+        sudo echo "localhost fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
 
     ### Run Fortify ScanCentral Client ###
     # Update BUILD_OPTS based on the ScanCentral Client documentation and your project's included tech stack(s).
@@ -66,5 +66,5 @@ jobs:
         SSC_UPLOAD_TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
         APPLICATION: "simplisticrabbitmq"
         VERSION: "10.0"
-        BUILD_OPTS: "-bt mvn"
+        BUILD_OPTS: "-bt mvn -bc -s settings.xml"
 
