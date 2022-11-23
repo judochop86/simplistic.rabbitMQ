@@ -66,5 +66,5 @@ jobs:
         SSC_UPLOAD_TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
         APPLICATION: "simplisticrabbitmq"
         VERSION: "10.0"
-        BUILD_OPTS: "-bt mvn -bc -s settings.xml"
+        BUILD_OPTS: '-bt mvn -bc "package -s settings.xml"'
 
